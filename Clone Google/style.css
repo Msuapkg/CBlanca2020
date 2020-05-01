@@ -1,0 +1,141 @@
+body{
+    font-family: 'Roboto', sans-seriff;
+}
+
+header{
+    text-align: right;
+    padding: 10px 25px;
+}
+
+main{
+    padding: 100px;
+    text-align: center;
+    height: 300px;
+}
+
+#links{
+    font-size: 13px;
+}
+
+#logo{
+    margin-bottom: 20px;
+}
+
+#search{
+    margin-bottom: 20px;
+}
+
+#search input{
+    width: 50%;
+    border-radius: 25px;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid gray;
+}
+
+#apps{
+    width: 24px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+#profile{
+    width: 32px;
+    border-radius: 50px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.link-header{
+    color: black;
+    margin-left: 10px;
+    vertical-align: midddle;
+}
+
+/*esto es un comentario*/
+
+.link-header:link{
+    text-decoration: none;
+}
+
+.link-header:hover{
+    color:magenta;
+    text-decoration: underline;
+}
+
+.button-search{
+    font-size: 16px;
+    border-radius: 3px;
+    padding: 10px;
+    margin-top: 15px;
+    margin-left: 10px;
+    background-image: -webkit-linear-gradient(top,#F5F5F5,#F1F1F1);
+    border: white 1px solid;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.button-search:hover{
+    border: #cccccc solid 1px;
+    color: black;
+    cursor: pointer;
+}
+
+#buttons p a{
+    color: blue;
+    text-decoration: none;
+}
+
+#buttons p a:hover{
+    text-decoration: underline;
+}
+
+footer{
+    position: absolute;
+    bottom: 10px;
+    background: #f2f2f2;
+    width: 100%;
+    padding: 20px;
+    font-size: 15px;
+}
+
+#country, #footer-links{
+    padding: 15px;
+}
+
+#country{
+    border: #c6c6c6 1px solid;
+}
+
+#country p{
+    margin: 0px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.x-links{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6);
+    margin-right: 15px;
+}
+
+.x-links:hover{
+    text-decoration: underline;
+}
+
+#footer-links{
+    display: flex;
+    justify-content: space-between;
+}
+
+label{
+    position: relative;
+}
+
+label::before{
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-image: url(lupa2.png);
+}

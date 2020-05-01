@@ -1,0 +1,71 @@
+Exercise 1)
+Write a JavaScript conditional statement to sort three numbers. 
+Display an alert box to show the result.
+Sample numbers : 0, -1, 4
+Output : 4, 0, -1
+
+Exercise 2)
+Write a JavaScript conditional statement to find the largest of five numbers. 
+Display an alert box to show the result.
+Sample numbers : -5, -2, -6, 0, -1
+Output : 0
+
+Exercise 3)
+Write a JavaScript for loop that will iterate from 0 to 15. 
+For each iteration, it will check if the current number is odd or even, and display a message to the screen.
+Sample Output :
+"0 is even"
+"1 is odd"
+"2 is even"
+
+Exercise 4)
+Dado el siguiente Arreglo 
+Estudiantes = [
+[“David”,80],[“Maria”,77],[“Luis”,88],[“Ana”,95],[“Pedro”,68]
+]
+Regresar un nuevo arreglo con sus calificaciones
+Según la siguiente tabla:
+
+ Range	      Grade
+<60	         F
+<70	         D
+<80	         C
+<90	         B
+<100	         A
+
+ej
+[‘B’,’C’,’B’,’A’’D’]
+
+Exercise 5)
+Write a JavaScript program which iterates the integers from 1 to 100. 
+But for multiples of three print "Fizz" instead of the number and for the multiples of five print "Buzz". 
+For numbers which are multiples of both three and five print "FizzBuzz"
+
+Exercise 6)
+Write a simple JavaScript program to join all elements of the following array into a string.
+Sample array : myColor = ["Red", "Green", "White", "Black"];
+
+"Red,Green,White,Black"
+"Red,Green,White,Black"
+"Red+Green+White+Black"
+
+Exercise 7)
+Escribir una funcion que reciba como parametro una operacion (suma,resta,multiplicacio,division) 
+en esta forma "3+4" y debe regresa el resulatado correspondiente
+
+Exercise 8)
+Write a JavaScript function that reverse a number
+ Example x = 32243;
+Expected Output : 34223
+
+Exercise 9)
+Write a JavaScript function that accepts a string as a parameter and converts 
+the first letter of each word of the string in upper case.
+Example string : 'the quick brown fox'
+Expected Output : 'The Quick Brown Fox '
+
+Exercise 10)
+Write a JavaScript function that accepts a string as a parameter and counts 
+the number of vowels within the string.
+Example string : 'The quick brown fox'
+Expected Output : 5

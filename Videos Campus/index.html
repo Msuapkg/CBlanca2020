@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <title>Campus - Videos</title>
+</head>
+<body>
+    <nav class="navbar has-shadow is-white" role="navigation" aria-label="main navigation" style="position: fixed;">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="logo" href="/profile">
+                    <img src="./images/logo-devf.74f78771.svg" alt="logo">
+                </a>
+                <p href="#" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </p>
+            </div>
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" activeclassname="active" href="/profile">
+                        <img src="/static/media/award.c0ac4578.svg" alt="Perfil"> INICIO</a>
+                    <a class="navbar-item" id="clases" activeclassname="active" href="/lectures">
+                        <img src="/static/media/book.a081e85f.svg" alt="Clases"> CLASES</a>
+                    <a aria-current="page" class="navbar-item active" id="videos" activeclassname="active" href="/videos">
+                        <img src="/static/media/video.7e38fedd.svg" alt="Videos" style="height: 25px;"> VIDEOS</a>
+                    <a class="navbar-item" activeclassname="active" href="/exercises/js/cintablanca/sum">
+                        <img src="/static/media/pencil.885ae05c.svg" alt="Katas"> KATAS</a>
+                    <a class="navbar-item" activeclassname="active" href="/project">
+                        <img src="/static/media/project.0d8a4599.svg" alt="Proyecto"> PROYECTO FINAL</a>
+                </div>
+                <div class="navbar-end">
+                    <div class="columns">
+                        <div class="column profile">
+                            <div class="media">
+                                <div class="media-left">
+                                    <figure class="image is-48x48">
+                                        <img src="data:image/png;base64, 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" alt="Profile pic">
+                                    </figure>
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-4 username">Saul Saavedra</p>
+                                </div>
+                                <div class="media-right">
+                                    <div class="dropdown is-right">
+                                        <div class="dropdown-trigger">
+                                            <div aria-haspopup="true" aria-controls="dropdown-menu">
+                                                <span class="icon is-small">
+                                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                                            <div class="dropdown-content">
+                                                <a class="dropdown-item">Cambiar contraseña</a>
+                                                <a class="dropdown-item logout" href="/logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <div></div>
+                <form>
+                    <div class="modal-card-body">
+                        <div class="field">
+                            <label for="oldPassword" class="label">Ingresa tu contraseña actual:</label>
+                            <div class="control has-icons-right">
+                                <input class="input" name="oldPassword" type="password" placeholder="" required="" value="">
+                                <div></div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="newPassword" class="label">Escribe una nueva contraseña:</label>
+                            <div class="control has-icons-right">
+                                <input class="input" name="newPassword" type="password" placeholder="" required="" value="">
+                                <div></div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="confirmNewPassword" class="label">Confirma tu nueva contraseña:</label>
+                            <div class="control has-icons-right">
+                                <input class="input" name="confirmNewPassword" type="password" placeholder="" required="" value="">
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-card-foot">
+                        <button type="submit" class="button is-success">Guardar cambios</button>
+                        <button type="button" class="button is-danger">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="videos-header"><h1>Aquí podrás encontrar los videos de tu cinta, solo busca a tu sensei</h1></div>
+    <div class="container video__container">
+        <div class="videos__video">
+            <iframe title="video" src="https://player.vimeo.com/video/407196922/" width="500" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe>
+            <p class="video__grupo">
+                <strong>Día 13: GIT</strong> Cinta Blanca
+            </p>
+            <p class="video__sensei">Sensei: Edwin</p>
+        </div>
+        <div class="videos__video">
+            <iframe title="video" src="https://player.vimeo.com/video/406256551/" width="500" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe>
+            <p class="video__grupo"><strong>Día 12: Final</strong> Cinta Blanca</p>
+            <p class="video__sensei">Sensei: Edwin</p>
+        </div>
+        <div class="videos__video">
+            <iframe title="video" src="https://player.vimeo.com/video/406037615/" width="500" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe>
+            <p class="video__grupo"><strong>Día 11: Repaso</strong> Cinta Blanca</p>
+            <p class="video__sensei">Sensei: Edwin</p>
+        </div>
+        <div class="videos__video"><iframe title="video" src="https://player.vimeo.com/video/405904860/" width="500" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe>
+            <p class="video__grupo"><strong>Día 12: Pokedex</strong> Cinta Blanca</p>
+            <p class="video__sensei">Sensei: Gera</p>
+        </div>
+        <div class="videos__video">
+            <iframe title="video" src="https://player.vimeo.com/video/405533586/" width="500" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe>
+            <p class="video__grupo"><strong>Día 11: DOM</strong> Cinta Blanca</p>
+            <p class="video__sensei">Sensei: Edwin</p>
+        </div>
+        <div class="videos__video">
+            <iframe title="video" src="https://player.vimeo.com/video/405314205/" width="500" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe>
+            <p class="video__grupo"><strong>Día 11: Objetos</strong> Cinta Blanca</p>
+            <p class="video__sensei">Sensei: Grera</p>
+        </div>
+        <div class="videos__video">
+            <iframe title="video" src="https://player.vimeo.com/video/405293776/" width="500" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe>
+            <p class="video__grupo"><strong>Día 11: DOM</strong> Cinta Blanca</p>
+            <p class="video__sensei">Sensei: Ricardo</p>
+        </div>
+        <div class="videos__video"><iframe title="video" src="https://player.vimeo.com/video/405291668/" width="500" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe><p class="video__grupo"><strong>Día 10: Fuction/Git</strong> Cinta Blanca</p><p class="video__sensei">Sensei: Ricardo</p></div><div class="videos__video"><iframe title="video" src="https://player.vimeo.com/video/405289900/" width="500" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe><p class="video__grupo"><strong>Día 9: Terminal</strong> Cinta Blanca</p><p class="video__sensei">Sensei: Ricardo</p></div><div class="videos__video"><iframe title="video" src="https://player.vimeo.com/video/405149304/" width="500" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe><p class="video__grupo"><strong>Día 8: Bootstrap</strong> Cinta Blanca</p><p class="video__sensei">Sensei: Ricardo</p></div><div class="videos__video"><iframe title="video" src="https://player.vimeo.com/video/405108857/" width="500" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe><p class="video__grupo"><strong>Día 10: BootstrapPt2</strong> Cinta Blanca</p><p class="video__sensei">Sensei: Edwin</p></div><div class="videos__video"><iframe title="video" src="https://player.vimeo.com/video/405060477/" width="500" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe><p class="video__grupo"><strong>Día 10: Git y Arrays</strong> Cinta Blanca</p><p class="video__sensei">Sensei: Gerardo</p></div><div class="videos__video"><iframe title="video" src="https://player.vimeo.com/video/404683930/" width="500" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe><p class="video__grupo"><strong>Día 9: Functions</strong> Cinta Blanca</p><p class="video__sensei">Sensei: Edwin</p></div><div class="videos__video"><iframe title="video" src="https://player.vimeo.com/video/404034860/" width="500" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe><p class="video__grupo"><strong>Día 9: Bootstrap Grid</strong> Cinta Blanca</p><p class="video__sensei">Sensei: Gera</p></div><div class="videos__video"><iframe title="video" src="https://player.vimeo.com/video/403431836/" width="500" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe><p class="video__grupo"><strong>Día 8: Bootstrap</strong> Cinta Blanca</p><p class="video__sensei">Sensei: Gera</p></div><div class="videos__video"><iframe title="video" src="https://player.vimeo.com/video/403190549/" width="500" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe><p class="video__grupo"><strong>Día 8: IntroBootstrap</strong> Cinta Blanca</p><p class="video__sensei">Sensei: Edwin</p></div><div class="videos__video"><iframe title="video" src="https://player.vimeo.com/video/403082689/" width="500" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe><p class="video__grupo"><strong>Día 7: Arreglos</strong> Cinta Blanca</p><p class="video__sensei">Sensei: Objetos/IntroCiclos</p></div><div class="videos__video"><iframe title="video" src="https://player.vimeo.com/video/403057897/" width="500" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe><p class="video__grupo"><strong>Día 7: Ciclos</strong> Cinta Blanca</p><p class="video__sensei">Sensei: Edwin</p></div><div class="videos__video"><iframe title="video" src="https://player.vimeo.com/video/402819544/" width="500" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe><p class="video__grupo"><strong>Día 7: If For</strong> Cinta Blanca</p><p class="video__sensei">Sensei: Gera</p></div><div class="videos__video"><iframe title="video" src="https://player.vimeo.com/video/402647778/" width="500" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe><p class="video__grupo"><strong>Día 5: Javascript</strong> Cinta Blanca</p><p class="video__sensei">Sensei: Gera</p></div><div class="videos__video"><iframe title="video" src="https://player.vimeo.com/video/402619877/" width="500" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe><p class="video__grupo"><strong>Día 6: IntroJS/Edwin</strong> Cinta Blanca</p><p class="video__sensei">Sensei: </p></div><div class="videos__video"><iframe title="video" src="https://player.vimeo.com/video/402431309/" width="500" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe><p class="video__grupo"><strong>Día 6: Condicionales</strong> Cinta Blanca</p><p class="video__sensei">Sensei: Ricardo</p></div><div class="videos__video"><iframe title="video" src="https://player.vimeo.com/video/402304477/" width="500" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe><p class="video__grupo"><strong>Día 5: Flexbox/</strong> Cinta Blanca</p><p class="video__sensei">Sensei: Edwin</p></div><div class="videos__video"><iframe title="video" src="https://player.vimeo.com/video/402296212/" width="500" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe><p class="video__grupo"><strong>Día 5: Flexbox</strong> Cinta Blanca</p><p class="video__sensei">Sensei: Edwin</p></div><div class="videos__video"><iframe title="video" src="https://player.vimeo.com/video/401741950/" width="500" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe><p class="video__grupo"><strong>Día 5: Flex Box/Intro JS</strong> Cinta Blanca</p><p class="video__sensei">Sensei: Ricardo</p></div><div class="videos__video"><iframe title="video" src="https://player.vimeo.com/video/401736378/" width="500" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe><p class="video__grupo"><strong>Día 4: Flex Box</strong> Cinta Blanca</p><p class="video__sensei">Sensei: Ricardo</p></div><div class="videos__video"><iframe title="video" src="https://player.vimeo.com/video/401728990/" width="500" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe><p class="video__grupo"><strong>Día 3: Box Model</strong> Cinta Blanca</p><p class="video__sensei">Sensei: Ricardo</p></div><div class="videos__video"><iframe title="video" src="https://player.vimeo.com/video/401720272/" width="500" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe><p class="video__grupo"><strong>Dia 2: Intro HTML/CSS</strong> Cinta Blanca</p><p class="video__sensei">Sensei: Ricardo</p></div><div class="videos__video"><iframe title="video" src="https://player.vimeo.com/video/401679713/" width="500" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe><p class="video__grupo"><strong>Día 4: Font Icons</strong> Cinta Blanca</p><p class="video__sensei">Sensei: Gera</p></div><div class="videos__video"><iframe title="video" src="https://player.vimeo.com/video/401409337/" width="500" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe><p class="video__grupo"><strong>Día 4: Flexbox</strong> Cinta Blanca</p><p class="video__sensei">Sensei: Gera</p></div><div class="videos__video"><iframe title="video" src="https://player.vimeo.com/video/401165578/" width="500" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe><p class="video__grupo"><strong>Dia 1 Clases</strong> Cinta Blanca</p><p class="video__sensei">Sensei: Mali</p></div><div class="videos__video"><iframe title="video" src="https://player.vimeo.com/video/401101177/" width="500" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe><p class="video__grupo"><strong>Día 3: CSS</strong> Cinta Blanca</p><p class="video__sensei">Sensei: Gera</p></div><div class="videos__video"><iframe title="video" src="https://player.vimeo.com/video/401073908/" width="500" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe><p class="video__grupo"><strong>Día 2: HTML</strong> Cinta Blanca</p><p class="video__sensei">Sensei: Gera</p></div><div class="videos__video"><iframe title="video" src="https://player.vimeo.com/video/401059207/" width="500" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe><p class="video__grupo"><strong>Dia</strong> Cinta Blanca</p><p class="video__sensei">Sensei: 3:Clases</p></div><div class="videos__video"><iframe title="video" src="https://player.vimeo.com/video/400799331/" width="500" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe><p class="video__grupo"><strong>Dia</strong> Cinta Blanca</p><p class="video__sensei">Sensei: 2:Clases</p></div><div class="videos__video"><iframe title="video" src="https://player.vimeo.com/video/400798310/" width="500" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe><p class="video__grupo"><strong>Dia</strong> Cinta Blanca</p><p class="video__sensei">Sensei: 1:Clases</p></div></div>
+
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> 
+<script src="./js/script.js"></script>
+</html>

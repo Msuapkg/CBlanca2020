@@ -1,0 +1,47 @@
+
+.main-container {
+    height: 410px;
+    width: 610px;
+    background: #002868;
+    color: white;
+
+    /* Va dentro del contenedor */
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content:space-between;
+}
+
+.Lbox {
+    background-color: white;
+    height: 180px;
+    width: 200px;;
+
+    display: flex;
+}
+
+.Rbox {
+    background-color: white;
+    height: 180px;
+    width: 360px;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.down {
+    align-self: flex-end;
+    align-items: flex-end;
+}
+
+.Lcuadrante {
+    background-color: #EF2B2D;
+    height: 155px;
+    width: 175px;
+}
+
+.Rcuadrante {
+    background-color: #EF2B2D;
+    height: 155px;
+    width: 335px;
+}
